@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>I'm Sorry</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    text-align:center;
+}
+
+.container{
+    padding:40px;
+}
+
+h1{
+    color:#ff4b5c;
+    font-size:40px;
+}
+
+.message{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+/* Photo gallery */
+
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.gallery img{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.1);
+}
+
+/* buttons */
+
+button{
+    margin-top:30px;
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.yes{
+    background:#4CAF50;
+    color:white;
+}
+
+.no{
+    background:#f44336;
+    color:white;
+    position:relative;
+}
+
+#response{
+    margin-top:20px;
+    font-size:22px;
+    color:#333;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>I'm Really Sorry 😔</h1>
+
+<p class="message">
+You are very important to me.  
+I know I made a mistake and I truly regret it.  
+you're my comfort person.
+thirumbi entha mistake pannamatenn nanu.
+vittu pogamatingala madam.
+nee kastam padarathuku na solla,thaniya erukaramari feel aagudhu.
+ennanala nee kastam pattu eruka class la romba soryyyyy.
+These memories mean everything to me.
+</p>
+
+<h2> Memories 📸</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+
+</div>
+
+<br>
+
+<button class="yes" onclick="forgive()">Forgive Me ❤️</button>
+<button class="no" onmouseover="moveButton()">No 😢</button>
+
+<div id="response"></div>
+
+</div>
+
+<script>
+
+function forgive(){
+document.getElementById("response").innerHTML =
+"Thank you for forgiving me ❤️ It means a lot!"
+"manithathuku nandriiiii";
+}
+
+function moveButton(){
+
+let btn=document.querySelector(".no");
+
+let x=Math.random()*300-150;
+let y=Math.random()*300-150;
+
+btn.style.transform="translate("+x+"px,"+y+"px)";
+}
+
+</script>
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="playMusic()">Play Music 🎵</button>
+
+<script>
+function playMusic(){
+document.getElementById("bgMusic").play();
+}
+</script>
+
+
+</body>
+</html>
