@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>I'm Sorry</title>
+<link rel="stylesheet" href="style.css">
 
 <style>
 
@@ -80,6 +81,35 @@ button{
 </style>
 </head>
 
+<script>
+
+let index = 0;
+
+window.addEventListener('DOMContentLoaded', function() {
+  showSlides();
+});
+
+function showSlides() {
+
+  let slides = document.getElementsByClassName("slides");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  index++;
+
+  if (index > slides.length) {
+    index = 1;
+  }
+
+  slides[index-1].style.display = "block";
+
+  setTimeout(showSlides, 3000); // change every 3 seconds
+}
+
+</script>
+
 <body>
 
 <div class="container">
@@ -98,13 +128,13 @@ These memories mean everything to me.
 last la song vachu eruken.
 </p>
 
-<h2> Memories 📸</h2>
+<h2>Memories 📸</h2>
 
-<div class="gallery">
+<div class="slideshow-container">
 
-<img src="photo1.jpg">
-<img src="photo2.jpg">
-<img src="photo3.jpg">
+  <img class="slides" src="photo1.jpg">
+  <img class="slides" src="photo2.jpg">
+  <img class="slides" src="photo3.jpg">
 
 </div>
 

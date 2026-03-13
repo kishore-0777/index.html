@@ -1,0 +1,11 @@
+.slideshow-container{
+  width:300px;
+  margin:auto;
+}
+
+.slides{
+  width:100%;
+  border-radius:15px;
+  display:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
